@@ -8,8 +8,15 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
 
+let feedbackState = {
+    feelings: 0,
+    understanding: 0,
+    support: 0,
+    comments: ''
+}
 
-const feedbackReducer = (state = [], action)=>{
+
+const feedbackReducer = (state = [feedbackState], action)=>{
     switch (action.type) {
         case 'SET_FEELINGS':
             return state;

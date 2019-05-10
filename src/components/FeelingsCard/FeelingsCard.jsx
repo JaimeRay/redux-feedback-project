@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 
 
 class feelingsCard extends Component {
+
+    
     render(){
         return(
             <div>
