@@ -16,4 +16,4 @@ const mapRedux = (reduxState) =>{
 }
   
 
-export default connect() (ReviewBox);
+export default connect(mapRedux) (ReviewBox);
