@@ -9,7 +9,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+app.post('/review', (req,res) =>{
+    console.log('in post', req.body)
+    res.sendStatus(200)
+    
+})
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

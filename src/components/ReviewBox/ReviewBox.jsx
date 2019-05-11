@@ -1,9 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 
 
 class ReviewBox extends Component {
+
+handleSubmit = () =>{
+    //package up data 
+    //axios post
+    axios({
+        method: 'POST',
+        url: '/review',
+        data: this.props.reduxState.feedbackReducer
+    }).then(response =>{
+        console.log(response)
+    }).catch(err =>{
+        console.log(err)
+    })
+}
+
+
+
+
+
     render() {
         return (
             <div>
@@ -12,7 +32,7 @@ class ReviewBox extends Component {
                 <p>Understanding {this.props.reduxState.feedbackReducer.understanding}</p>
                 <p>Support {this.props.reduxState.feedbackReducer.support}</p>
                 <p>Comments {this.props.reduxState.feedbackReducer.comments}</p>
-                {/* <button onClick={() => this.props.history.push('/')}>Next</button> */}
+                <button onClick={this.handleSubmit}>Next</button>
             </div>
 
         )
