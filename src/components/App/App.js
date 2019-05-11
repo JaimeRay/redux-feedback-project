@@ -26,6 +26,7 @@ class App extends Component {
           <Route path="/understanding" component={UnderstandingCard}></Route>
           <Route path="/support" component={SupportCard}></Route>
           <Route path="/comments" component={CommentsCard}></Route>
+          <Route path="/review" Component={ReviewBox}></Route>
           
         </Router>
         <ReviewBox />

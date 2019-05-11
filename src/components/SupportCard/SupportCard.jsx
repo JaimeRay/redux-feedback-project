@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 
 
 class SupportCard extends Component {
+    handleChange = (event) => {
+        this.props.dispatch({type:'SET_SUPPORT', payload: event.target.value});
+    }
     render() {
         return (
             <div>
                 <h2>Do you feel supported by staff today?</h2>
                 <label>1-5</label>
-                <input placeholder="1-5"></input>
+                <input onChange={this.handleChange} placeholder="1-5"></input>
                 <button onClick={()=> this.props.history.push('/comments')}>NEXT</button>
             </div>
 
