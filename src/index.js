@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import logger from 'redux-logger'
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger';
 
 
 let feedbackState = {
@@ -39,7 +39,7 @@ const feedbackReducer = (state = feedbackState, action)=>{
                 comments: action.payload
             }
         default:
-            return state
+            return state;
     }
 }
 

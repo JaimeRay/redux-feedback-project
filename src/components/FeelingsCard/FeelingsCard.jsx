@@ -3,15 +3,18 @@ import {connect} from 'react-redux';
 
 
 
-class feelingsCard extends Component {
+class FeelingsCard extends Component {
 
-    
-    render(){
+    handleChange = (event) => {
+        this.props.dispatch({type:'SET_FEELINGS', payload: event.target.value});
+    }
+
+    render() {
         return(
             <div>
                 <h2>How Are You Feeling Today?</h2>
                 <label>Feelings 1-5 </label>
-                <input placeholder="1-5" type="number"></input>
+                <input onChange={this.handleChange} placeholder="1-5" type="number"/>
                 <button onClick={()=> this.props.history.push('/understanding')}>NEXT</button>
             </div>
           
@@ -22,4 +25,4 @@ class feelingsCard extends Component {
 
   
 
-export default connect() (feelingsCard);
+export default connect()(FeelingsCard);
