@@ -11,8 +11,8 @@ class SupportCard extends Component {
         return (
             <div>
                 <h2>Do you feel supported by staff today?</h2>
-                <label>1-5</label>
-                <input onChange={this.handleChange} placeholder="1-5"></input>
+                {/* <label>1-5</label> */}
+                <input onChange={this.handleChange} placeholder="1-5" type="number"></input>
                 <button onClick={()=> this.props.history.push('/comments')}>NEXT</button>
                 <ReviewBox />
             </div>

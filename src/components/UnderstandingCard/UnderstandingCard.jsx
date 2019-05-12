@@ -11,7 +11,7 @@ class UnderstandingCard extends Component {
         return(
             <div>
             <h2>Do You Feel Like You Understand Things Today?</h2>
-            <label> 1-5 </label>
+            {/* <label> 1-5 </label> */}
             <input onChange={this.handleChange} placeholder="1-5" type="number"></input>
             <button onClick={()=> this.props.history.push('/support')}>NEXT</button>
             <ReviewBox />

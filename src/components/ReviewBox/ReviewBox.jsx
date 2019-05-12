@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 //import {withRouter} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 
 class ReviewBox extends Component {
@@ -22,7 +23,9 @@ class ReviewBox extends Component {
     }
 
 
-
+//     <Button variant="contained" color="primary" className={classes.button}>
+//     Primary
+//   </Button>
 
 
     render() {
@@ -31,7 +34,7 @@ class ReviewBox extends Component {
             this.props.reduxState.feedbackReducer.understanding &&
             this.props.reduxState.feedbackReducer.support &&
             this.props.reduxState.feedbackReducer.comments) {
-            myButton = <button onClick={this.handleSubmit}>Submit</button>
+            myButton = <button type="button" class="btn btn-primary"  onClick={this.handleSubmit}>Submit</button>
         } else {
             myButton = <button disabled>Submit</button>
         }

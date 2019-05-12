@@ -17,7 +17,7 @@ class FeelingsCard extends Component {
         return(
             <div>
                 <h2>How Are You Feeling Today?</h2>
-                <label>Feelings 1-5 </label>
+                {/* <label>Feelings   </label> */}
                 <input onChange={this.handleChange} placeholder="1-5" type="number"/>
                 <button onClick={()=> this.props.history.push('/understanding')}>NEXT</button>
                 <ReviewBox />
