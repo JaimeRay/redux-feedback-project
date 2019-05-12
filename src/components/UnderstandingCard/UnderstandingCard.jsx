@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-
+import ReviewBox from '../ReviewBox/ReviewBox'
 
 class UnderstandingCard extends Component {
     handleChange = (event) => {
@@ -14,6 +14,7 @@ class UnderstandingCard extends Component {
             <label> 1-5 </label>
             <input onChange={this.handleChange} placeholder="1-5" type="number"></input>
             <button onClick={()=> this.props.history.push('/support')}>NEXT</button>
+            <ReviewBox />
         </div>
         )
     }

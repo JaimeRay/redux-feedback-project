@@ -9,6 +9,7 @@ import CommentsCard from '../CommentsCard/CommentsCard'
 import SupportCard from '../SupportCard/SupportCard'
 import UnderstandingCard from '../UnderstandingCard/UnderstandingCard'
 import ReviewBox from '../ReviewBox/ReviewBox'
+import ThankYou from '../ThankYou/ThankYou'
 
 
 
@@ -26,10 +27,10 @@ class App extends Component {
           <Route path="/understanding" component={UnderstandingCard}></Route>
           <Route path="/support" component={SupportCard}></Route>
           <Route path="/comments" component={CommentsCard}></Route>
-          <Route path="/review" Component={ReviewBox}></Route>
-          
+           <Route path="/review" component={ReviewBox}></Route>
+          <Route path="/thankyou" component={ThankYou}></Route> 
         </Router>
-        <ReviewBox />
+    
       </div>
     );
   }

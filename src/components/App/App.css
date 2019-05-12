@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #5E6EF6;
   min-height: 70px;
   padding: 20px;
   color: white;
@@ -16,4 +16,9 @@
 .App-intro {
   font-size: large;
 }
-
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

@@ -16,7 +16,7 @@ let feedbackState = {
 }
 
 
-const feedbackReducer = (state = feedbackState, action)=>{
+const feedbackReducer = (state = feedbackState, action) => {
     switch (action.type) {
         case 'SET_FEELINGS':
             return {
@@ -38,6 +38,9 @@ const feedbackReducer = (state = feedbackState, action)=>{
                 ...state,
                 comments: action.payload
             }
+        case 'CLEAR_STATE':
+            return feedbackState
+
         default:
             return state;
     }

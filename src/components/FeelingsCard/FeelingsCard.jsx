@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-
+import ReviewBox from '../ReviewBox/ReviewBox'
 
 
 class FeelingsCard extends Component {
+
+    componentDidMount() { 
+       this.props.dispatch({type: 'CLEAR_STATE'})
+      }
 
     handleChange = (event) => {
         this.props.dispatch({type:'SET_FEELINGS', payload: event.target.value});
@@ -16,6 +20,7 @@ class FeelingsCard extends Component {
                 <label>Feelings 1-5 </label>
                 <input onChange={this.handleChange} placeholder="1-5" type="number"/>
                 <button onClick={()=> this.props.history.push('/understanding')}>NEXT</button>
+                <ReviewBox />
             </div>
           
         )
