@@ -7,7 +7,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-
+//this sets the original review page thingy to empty or starting at 0
 let feedbackState = {
     feelings: 0,
     understanding: 0,
@@ -18,6 +18,8 @@ let feedbackState = {
 
 const feedbackReducer = (state = feedbackState, action) => {
     switch (action.type) {
+        //I was trying something new here  and i think i might like it better than the usual if statement and having
+        // a bunch of else's
         case 'SET_FEELINGS':
             return {
                 ...state,

@@ -17,8 +17,10 @@ class FeelingsCard extends Component {
         return(
             <div>
                 <h2>How Are You Feeling Today?</h2>
+                {/* i think it looked better without the lable in there, but i did start it out this way */}
                 {/* <label>Feelings   </label> */}
                 <input onChange={this.handleChange} placeholder="1-5" type="number"/>
+                {/* on the click of the button it moves to the next page  */}
                 <button onClick={()=> this.props.history.push('/understanding')}>NEXT</button>
                 <ReviewBox />
             </div>
