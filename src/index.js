@@ -22,7 +22,7 @@ const feedbackReducer = (state = feedbackState, action) => {
         // a bunch of else's
         case 'SET_FEELINGS':
             return {
-                ...state,
+                ...state,//over right what was in there line 26
                 feelings: action.payload
             }
         case 'SET_UNDERSTANDING':

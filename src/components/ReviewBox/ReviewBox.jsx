@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-//import {withRouter} from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import {withRouter} from 'react-router-dom';
+//import Button from '@material-ui/core/Button';
 
 
 class ReviewBox extends Component {
@@ -61,4 +61,4 @@ const mapRedux = (reduxState) => {
 }
 
 
-export default connect(mapRedux)(ReviewBox);
+export default withRouter( connect(mapRedux)(ReviewBox));
